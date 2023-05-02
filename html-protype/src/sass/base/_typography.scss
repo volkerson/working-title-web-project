@@ -1,0 +1,89 @@
+@use '../abstracts/icons' as icon;
+@use '../abstracts/colors' as color;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/functions' as func;
+@use '../abstracts/margins' as margin;
+
+
+// get the imported fonts
+@use './fonts';
+
+html {
+    font-size: 62.5%;
+}
+
+// desktop
+
+h1 {
+    font-family: "Urbanist-Bold", Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    line-height: 1em; 
+    letter-spacing: 1px; 
+    text-transform: uppercase;
+    color: color.$brand-color__contrast--dark;
+    margin: 37px 0 9px 0;      
+}
+
+h2 {
+    font-family: "Urbanist-SemiBold", Helvetica, Arial, sans-serif;
+    font-size: 5.9em;
+    line-height: 1em; 
+    color: var.$white;
+    margin: 0 0 57px 0;
+
+    & span {
+       color: color.$brand_color__default--light;
+    }       
+}
+
+p {
+    font-family: "TitilliumWeb-Regular", Helvetica, Arial, sans-serif;
+    font-size: 1.9em;
+    line-height: 1.4em;
+    font-weight: 400;
+    margin: 0 0 57px 0;
+}
+
+.btn {
+    font-family: "Urbanist-SemiBold", Helvetica, Arial, sans-serif;
+    font-size: 1.9em;
+    line-height: 1em; 
+    font-weight: 600;
+}
+
+.fixed-elements--menu  {
+    font-family: "TitilliumWeb-SemiBold", Helvetica, Arial, sans-serif;
+    font-size: 1.9em;
+    line-height: 1em;      
+}
+
+.fixed-elements--theme--text {
+    font-size: 1.9em
+}
+
+// BREAKPOINTS
+// @smartphone: less than 768px
+// @tablet: more than 768px
+// @laptop: more than 1200px
+// @high-resolution: more than 1920px
+
+// BREAKPOINT 767px - Smartphones
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-family: "Urbanist-SemiBold", Helvetica, Arial, sans-serif;
+        font-size: 1.4em;
+        margin: 29px 0 9px 0;  
+    }
+
+    h2 {
+        font-size: 4.1em;
+        margin: 0 0 37px 0;
+    }
+
+    p {
+        font-size: 1.8em;
+    }
+  
+  }

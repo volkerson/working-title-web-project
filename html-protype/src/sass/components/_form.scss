@@ -1,0 +1,18 @@
+@use '../abstracts/icons' as icon;
+@use '../abstracts/colors' as color;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/functions' as func;
+@use '../abstracts/margins' as margin;
+@use '../abstracts/fonts';
+
+
+.form {
+    width: 100%;
+    height: 500px;
+    background-color: color.$brand-color__default--extra-light;
+    
+    & article {
+        width: 100%;
+    }
+}
+

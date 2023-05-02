@@ -1,0 +1,4 @@
+node_modules
+public/assets/images
+src/assets
+src/*.html

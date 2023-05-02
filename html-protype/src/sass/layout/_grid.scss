@@ -1,0 +1,209 @@
+@use '../abstracts/icons' as icon;
+@use '../abstracts/colors' as color;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/functions' as func;
+@use '../abstracts/margins' as margin;
+@use '../abstracts/fonts';
+
+
+html {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 150px 0 0 0;
+    width: 100%;
+    height: auto;
+  }
+
+  header {
+    width: 100%;
+    height: calc(100vh - 150px);
+    background-color: color.$brand-color__default--dark;   
+  }
+
+
+  .cmp-wrapper {
+    width: calc(100% - (margin.$distance-sides + margin.$distance-sides) );
+    height: 100%;
+    margin: 0 margin.$distance-sides 0 margin.$distance-sides; 
+    padding: 5% 0 5% 0;
+    border: 1px solid red;
+    display: flex;
+}
+
+  article {
+    width: 60%;
+    height: 100%;
+    //background-color: burlywood;
+  }
+
+  article h1 {
+    width:100%;
+  }
+
+  article h2 {
+    width: 60%;
+  }
+
+  article p {
+    width: 65%;
+  }
+  
+  
+  aside {
+    width: 40%;
+    height: 100%;
+    background-color: grey;
+  }
+
+
+footer {
+    width: 100%;
+    height: 500px;
+    background-color: color.$white;
+    
+    & article {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// BREAKPOINT 1500px 
+@media (max-width: 1500px) {
+  
+  article h2 {
+    width: 70%;
+  }
+
+  article p {
+    width: 75%;
+  }
+
+}
+
+// BREAKPOINT 1300px 
+@media (max-width: 1300px) {
+  
+  article h2 {
+    width: 80%;
+  }
+
+  article p {
+    width: 85%;
+  }
+}
+
+
+// BREAKPOINT 1200px
+
+  @media (max-width: 1200px) {
+
+    
+}
+
+
+
+@media (min-width:768px) and (max-width: 1000px) and (orientation: portrait) {
+
+  header {
+    height: auto;
+  }
+}
+
+
+// BREAKPOINT 767px - Smartphones
+
+@media (max-width: 767px) {
+
+
+    // PORTRAIT
+
+    @media (orientation: portrait) {
+
+      .cmp-wrapper {
+        flex-direction: column; 
+      }
+
+      article,
+      aside {
+        width: 100%;      
+      } 
+  
+      article {
+        height: 60%;
+      }
+  
+      aside {
+        height: 40%;
+      }      
+    }
+
+    // LANDSCAPE
+
+    @media (orientation: landscape) {
+      .cmp-wrapper {
+        flex-direction: row; 
+      }
+    }  
+      
+      article h2 {
+        width: 85%;
+      }
+
+      article p {
+        width: 95%;
+      } 
+
+
+  .page-container {
+    margin: 115px 0 0 0;
+  }
+
+  header {
+    height: calc(100vh - 115px);
+  }
+
+  .cmp-wrapper {
+      width: calc(100% -  (margin.$distance-sides__mobile + margin.$distance-sides__mobile) );
+      margin: 0 margin.$distance-sides__mobile 0 margin.$distance-sides__mobile; 
+      border: 2px solid white;
+      padding: 0;
+  } 
+  
+  article h1,
+  article h2,
+  article p {
+    width: 100%;
+  }
+
+}
+
+// on devices with a samll height, the header shouldn't have a fixed height of (100vh - fixed-elements)
+
+@media (max-height: 699px) or (max-width: 375px) {
+  
+  header {
+    height: auto;
+
+    &--main {
+      height: auto;
+    }
+
+    &--aside {
+      height: auto;
+    }
+  }
+  
+}

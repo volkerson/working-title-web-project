@@ -1,0 +1,11 @@
+.DS_Store
+
+administration/
+research/
+material/
+html-prototype/node_modules
+**/*/assets/fonts/
+**/*/assets/images/
+html-prototype/assets/
+html-prototype/*.html/
+

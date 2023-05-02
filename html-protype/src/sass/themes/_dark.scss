@@ -1,0 +1,26 @@
+@use '../abstracts/icons' as icon;
+@use '../abstracts/colors' as color;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/functions' as func;
+@use '../abstracts/margins' as margin;
+@use '../abstracts/fonts';
+
+// Header
+.dark-theme .fixed-elements {
+    background-color: color.$black;
+    color: color.$white;
+}
+
+.dark-theme .fixed-elements--theme--toggle-background {
+    background-color: color.$grey-dark;
+}
+
+.dark-theme .fixed-elements ul li a {
+    color: color.$white;
+}
+
+// Herobox
+
+.dark-theme header {
+    background-color: color.$grey-dark;
+}

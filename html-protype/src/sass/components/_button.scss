@@ -1,0 +1,45 @@
+@use '../abstracts/icons' as icon;
+@use '../abstracts/colors' as color;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/functions' as func;
+@use '../abstracts/margins' as margin;
+@use '../abstracts/fonts';
+
+.btn {
+    width: 251px;
+    padding: 13px 0 13px 0;
+    margin: 0 10px 0 0;
+    border-radius: 33px;
+    background: none;
+    border: 2px solid color.$white;
+    cursor: pointer;
+}
+
+.btn__transparent {
+    color: var.$white;
+
+    &:hover {
+        background-color: color.$brand-color__default--light;
+        color: color.$brand-color__default--dark;
+    }      
+}
+
+.btn__greenFilling {
+    background-color: color.$brand-color__default--dark;
+    border: 2px solid color.$brand-color__default--dark; 
+    color: var.$white;
+
+    &:hover {
+        background-color: color.$brand-color__default--light;
+        color: color.$brand-color__default--dark;        
+    }    
+}
+
+.btn__gradient {
+    background: linear-gradient(90deg, #F8CF7F 9.65%, #DDF49F 92.74%);;
+    color: color.$brand-color__default--dark;
+
+    &:hover {
+        background: linear-gradient(90deg, #DDF49F 9.65%, #F8CF7F 92.74%);
+    }
+}
