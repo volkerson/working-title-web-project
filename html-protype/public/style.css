@@ -1,3 +1,33 @@
+@font-face {
+  font-family: "TitilliumWeb-Regular";
+  src: url("assets/fonts/TitilliumWeb/TitilliumWeb-Regular.eot");
+  src: url("assets/fonts/TitilliumWeb/TitilliumWeb-Regular.woff") format("woff"), url("assets/fonts/TitilliumWeb/TitilliumWeb-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "TitilliumWeb-SemiBold";
+  src: url("assets/fonts/TitilliumWeb/TitilliumWeb-SemiBold.eot");
+  src: url("assets/fonts/TitilliumWeb/TitilliumWeb-SemiBold.woff") format("woff"), url("assets/fonts/TitilliumWeb/TitilliumWeb-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Urbanist-Medium";
+  src: url("assets/fonts/Urbanist/Urbanist-Medium.eot");
+  src: url("assets/fonts/Urbanist/Urbanist-Medium.woff") format("woff"), url("assets/fonts/Urbanist/Urbanist-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Urbanist-SemiBold";
+  src: url("assets/fonts/Urbanist/Urbanist-SemiBold.eot");
+  src: url("assets/fonts/Urbanist/Urbanist-SemiBold.woff") format("woff"), url("assets/fonts/Urbanist/Urbanist-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Urbanist-Bold";
+  src: url("assets/fonts/Urbanist/Urbanist-Bold.eot");
+  src: url("assets/fonts/Urbanist/Urbanist-Bold.woff") format("woff"), url("assets/fonts/Urbanist/Urbanist-Bold.ttf") format("truetype");
+  font-display: swap;
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -44,30 +74,6 @@ dl dd {
   list-style: none;
 }
 
-@font-face {
-  font-family: "TitilliumWeb-Regular";
-  src: url("assets/fonts/TitilliumWeb/TitilliumWeb-Regular.eot");
-  src: url("assets/fonts/TitilliumWeb/TitilliumWeb-Regular.woff") format("woff"), url("assets/fonts/TitilliumWeb/TitilliumWeb-Regular.ttf") format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "TitilliumWeb-SemiBold";
-  src: url("assets/fonts/TitilliumWeb/TitilliumWeb-SemiBold.eot");
-  src: url("assets/fonts/TitilliumWeb/TitilliumWeb-SemiBold.woff") format("woff"), url("assets/fonts/TitilliumWeb/TitilliumWeb-SemiBold.ttf") format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Urbanist-SemiBold";
-  src: url("assets/fonts/Urbanist/Urbanist-SemiBold.eot");
-  src: url("assets/fonts/Urbanist/Urbanist-SemiBold.woff") format("woff"), url("assets/fonts/Urbanist/Urbanist-SemiBold.ttf") format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Urbanist-Bold";
-  src: url("assets/fonts/Urbanist/Urbanist-Bold.eot");
-  src: url("assets/fonts/Urbanist/Urbanist-Bold.woff") format("woff"), url("assets/fonts/Urbanist/Urbanist-Bold.ttf") format("truetype");
-  font-display: swap;
-}
 html {
   font-size: 62.5%;
 }
@@ -99,6 +105,11 @@ p {
   line-height: 1.4em;
   font-weight: 400;
   margin: 0 0 57px 0;
+}
+
+p strong {
+  font-family: "TitilliumWeb-SemiBold", Helvetica, Arial, sans-serif;
+  font-weight: 600;
 }
 
 .btn {
@@ -174,14 +185,18 @@ article {
 }
 
 article h1 {
-  width: 100%;
+  width: 65%;
 }
 
 article h2 {
-  width: 60%;
+  width: 65%;
 }
 
 article p {
+  width: 65%;
+}
+
+.buttons {
   width: 65%;
 }
 
@@ -215,6 +230,11 @@ footer article {
   }
   article p {
     width: 85%;
+  }
+}
+@media (max-width: 1200px) {
+  header {
+    height: auto;
   }
 }
 @media (min-width: 768px) and (max-width: 1000px) and (orientation: portrait) {
@@ -288,51 +308,6 @@ footer article {
     height: auto;
   }
 }
-.btn {
-  width: 251px;
-  padding: 13px 0 13px 0;
-  margin: 0 10px 0 0;
-  border-radius: 33px;
-  background: none;
-  border: 2px solid #fff;
-  cursor: pointer;
-}
-
-.btn__transparent {
-  color: #fff;
-}
-.btn__transparent:hover {
-  background-color: #DDF49F;
-  color: #105749;
-}
-
-.btn__greenFilling {
-  background-color: #105749;
-  border: 2px solid #105749;
-  color: #fff;
-}
-.btn__greenFilling:hover {
-  background-color: #DDF49F;
-  color: #105749;
-}
-
-.btn__gradient {
-  background: linear-gradient(90deg, #F8CF7F 9.65%, #DDF49F 92.74%);
-  color: #105749;
-}
-.btn__gradient:hover {
-  background: linear-gradient(90deg, #DDF49F 9.65%, #F8CF7F 92.74%);
-}
-
-.form {
-  width: 100%;
-  height: 500px;
-  background-color: #F9FDED;
-}
-.form article {
-  width: 100%;
-}
-
 .fixed-elements {
   width: 100%;
   height: 150px;
@@ -457,17 +432,44 @@ nav {
 .herobox article p {
   color: #fff;
 }
+.herobox article .buttons {
+  width: 70%;
+}
 
+@media (max-width: 1200px) {
+  .herobox article button {
+    margin: 0 10px 19px 0;
+  }
+}
 .intro {
   width: 100%;
-  height: 500px;
+  height: auto;
   background-color: #F9FDED;
+}
+.intro article {
+  border: 1px solid black;
+}
+.intro article h2,
+.intro article h1,
+.intro article p,
+.intro article .buttons {
+  float: right;
+}
+.intro article h2 {
+  color: #105749;
+}
+.intro article p {
+  margin: 0 0 29px 0;
 }
 
 .benefits {
   width: 100%;
   height: 500px;
   background-color: #FEF6E7;
+}
+
+.benefit-card {
+  float: left;
 }
 
 .magazine {
@@ -485,9 +487,107 @@ nav {
   background-color: #FEF6E7;
 }
 
+.btn {
+  width: 251px;
+  padding: 13px 0 13px 0;
+  margin: 0 10px 0 0;
+  border-radius: 33px;
+  background: none;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.btn__transparent {
+  color: #fff;
+}
+.btn__transparent:hover {
+  background-color: #DDF49F;
+  color: #105749;
+}
+
+.btn__greenFilling {
+  background-color: #105749;
+  border: 2px solid #105749;
+  color: #fff;
+}
+.btn__greenFilling:hover {
+  background-color: #DDF49F;
+  color: #105749;
+}
+
+.btn__gradient {
+  background: linear-gradient(90deg, #F8CF7F 9.65%, #DDF49F 92.74%);
+  color: #105749;
+}
+.btn__gradient:hover {
+  background: linear-gradient(90deg, #DDF49F 9.65%, #F8CF7F 92.74%);
+}
+
+.form {
+  width: 100%;
+  height: 500px;
+  background-color: #F9FDED;
+}
+.form article {
+  width: 100%;
+}
+
+.benefit-card {
+  width: 350px;
+  height: 150px;
+  border-radius: 33px;
+  background-color: #fff;
+  border: 1px solid #DBDBDB;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.benefit-card--title {
+  width: calc(100% - 66px);
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 0 0 0;
+  margin: 0 0 0 33px;
+}
+.benefit-card--title p {
+  margin: 0;
+  font-family: "Urbanist-Bold", Helvetica, Arial, sans-serif;
+  font-size: 5.7em;
+  color: #2F2F2F;
+}
+.benefit-card--title--icon {
+  width: 77px;
+  height: 77px;
+  border-radius: 77px;
+  background-color: #FEF6E7;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.benefit-card--subtitle {
+  width: calc(100% - 66px);
+  margin: 3px 0 0 33px;
+}
+.benefit-card--subtitle p {
+  width: 100%;
+  font-family: "Urbanist-Medium", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.9em;
+  color: #9A9A9A;
+  margin: 0;
+}
+
+.trending-up .benefit-card--title--icon {
+  background-image: url(../assets/images/icon_trending-up.svg);
+}
+
+.recycle .benefit-card--title--icon {
+  background-image: url(../assets/images/icon_recycle.svg);
+}
+
 .dark-theme .fixed-elements {
   background-color: #0f0f0f;
-  color: white;
+  color: #fff;
 }
 
 .dark-theme .fixed-elements--theme--toggle-background {

@@ -16,7 +16,7 @@
 }
 
 .btn__transparent {
-    color: var.$white;
+    color: color.$white;
 
     &:hover {
         background-color: color.$brand-color__default--light;
@@ -27,7 +27,7 @@
 .btn__greenFilling {
     background-color: color.$brand-color__default--dark;
     border: 2px solid color.$brand-color__default--dark; 
-    color: var.$white;
+    color: color.$white;
 
     &:hover {
         background-color: color.$brand-color__default--light;

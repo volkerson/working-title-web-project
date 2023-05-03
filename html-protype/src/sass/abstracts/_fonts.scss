@@ -1,6 +1,7 @@
 // Titillium-Web
 // https://fonts.google.com/specimen/Titillium+Web
 
+// 400
 @font-face {
     font-family: 'TitilliumWeb-Regular'; 
     src: url('assets/fonts/TitilliumWeb/TitilliumWeb-Regular.eot');
@@ -11,6 +12,7 @@
     font-display: swap;
 }
 
+// 600
 @font-face {
     font-family: 'TitilliumWeb-SemiBold'; 
     src: url('assets/fonts/TitilliumWeb/TitilliumWeb-SemiBold.eot');
@@ -24,6 +26,18 @@
 // Urbanist
 // https://fonts.google.com/specimen/Urbanist
 
+// 500
+@font-face {
+    font-family: 'Urbanist-Medium'; 
+    src: url('assets/fonts/Urbanist/Urbanist-Medium.eot');
+    src: url('assets/fonts/Urbanist/Urbanist-Medium.woff') 
+    format('woff'), 
+    url('assets/fonts/Urbanist/Urbanist-Medium.ttf') 
+    format('truetype');
+    font-display: swap;
+}
+
+// 600
 @font-face {
     font-family: 'Urbanist-SemiBold'; 
     src: url('assets/fonts/Urbanist/Urbanist-SemiBold.eot');
@@ -34,6 +48,7 @@
     font-display: swap;
 }
 
+// 700
 @font-face {
     font-family: 'Urbanist-Bold'; 
     src: url('assets/fonts/Urbanist/Urbanist-Bold.eot');

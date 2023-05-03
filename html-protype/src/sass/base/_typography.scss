@@ -6,7 +6,7 @@
 
 
 // get the imported fonts
-@use './fonts';
+@use '../abstracts/fonts';
 
 html {
     font-size: 62.5%;
@@ -28,7 +28,7 @@ h2 {
     font-family: "Urbanist-SemiBold", Helvetica, Arial, sans-serif;
     font-size: 5.9em;
     line-height: 1em; 
-    color: var.$white;
+    color: color.$white;
     margin: 0 0 57px 0;
 
     & span {
@@ -42,6 +42,11 @@ p {
     line-height: 1.4em;
     font-weight: 400;
     margin: 0 0 57px 0;
+}
+
+p strong {
+    font-family: "TitilliumWeb-SemiBold", Helvetica, Arial, sans-serif;
+    font-weight: 600;
 }
 
 .btn {

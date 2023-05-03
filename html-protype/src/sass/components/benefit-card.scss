@@ -1,0 +1,66 @@
+@use '../abstracts/icons' as icon;
+@use '../abstracts/colors' as color;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/functions' as func;
+@use '../abstracts/margins' as margin;
+@use '../abstracts/fonts';
+
+.benefit-card {
+    width: 350px;
+    height: 150px;
+    border-radius: 33px;
+    background-color: color.$white;
+    border: 1px solid color.$grey-extra-light_border;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    &--title {
+        width: calc(100% - 66px);
+        display: flex;
+        justify-content: space-between;
+        padding: 21px 0 0 0;
+        margin: 0 0 0 33px;
+
+         p {
+            margin: 0;
+            font-family: 'Urbanist-Bold', Helvetica, Arial, sans-serif;
+            font-size: 5.7em;
+            color: color.$grey-dark;
+        }   
+        
+        &--icon {
+            width: 77px;
+            height: 77px;
+            border-radius: 77px;
+            background-color: color.$brand-color__contrast--light;
+            background-repeat: no-repeat;
+            background-position: center center;             
+        }
+    }
+
+
+    &--subtitle{
+        width: calc(100% - 66px);
+        margin: 3px 0 0 33px;
+
+
+        & p {
+            width: 100%;
+            font-family: 'Urbanist-Medium', Helvetica, Arial, sans-serif;
+            font-weight: 500;
+            font-size: 1.9em;
+            color: color.$grey-light;
+            margin: 0;
+        }
+    }    
+}
+
+.trending-up .benefit-card--title--icon {
+    background-image: icon.$icon-trending-up;
+}
+
+.recycle .benefit-card--title--icon  {
+    background-image: icon.$icon-recycle;
+}
